@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
     public Text dialogueText;
     public string[] dialogue;
     private int index;
+    public KeyCode keyToPress;
 
     public float typingSpeed = 0.05f; // Vitesse de dactylographie du texte
     public AudioClip typingSound; // Son de dactylographie
@@ -16,7 +17,7 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && dialoguePanel.activeSelf)
+        if (Input.GetKeyDown(keyToPress) && dialoguePanel.activeSelf)
         {
             DisplayNextLine();
         }
