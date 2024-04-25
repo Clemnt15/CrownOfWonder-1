@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 wallJumpingPower = new Vector2(8f, 16f);
 
     private bool isHangingOnWall;
-    private KeyCode hangOnWallKey = KeyCode.E;
+    private KeyCode hangOnWallKey = KeyCode.R;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;

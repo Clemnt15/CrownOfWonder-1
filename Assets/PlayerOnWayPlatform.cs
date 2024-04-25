@@ -7,6 +7,8 @@ public class PlayerOneWayPlatform : MonoBehaviour
 
     [SerializeField] private BoxCollider2D playerCollider;
 
+    private bool canJumpOnPlatform = false;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
@@ -16,6 +18,16 @@ public class PlayerOneWayPlatform : MonoBehaviour
                 StartCoroutine(DisableCollision());
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && canJumpOnPlatform)
+        {
+            Jump();
+        }
+    }
+
+    private void Jump()
+    {
+        // Implémente ici la logique de saut du joueur
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,6 +35,7 @@ public class PlayerOneWayPlatform : MonoBehaviour
         if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
             currentOneWayPlatform = collision.gameObject;
+            canJumpOnPlatform = true;
         }
     }
 
@@ -31,6 +44,7 @@ public class PlayerOneWayPlatform : MonoBehaviour
         if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
             currentOneWayPlatform = null;
+            canJumpOnPlatform = false;
         }
     }
 
