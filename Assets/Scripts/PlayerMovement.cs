@@ -57,7 +57,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         WallSlide();
-        WallJump();
+
+        // Check for wall jump when player is not already wall sliding or wall jumping
+        if (!isWallSliding && !isWallJumping && IsWalled())
+        {
+            WallJump();
+        }
 
         if (!isWallJumping)
         {
@@ -122,35 +127,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallJump()
     {
-        if (isWallSliding)
+        isWallJumping = true;
+        wallJumpingDirection = -transform.localScale.x;
+        rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+
+        if (transform.localScale.x != wallJumpingDirection)
         {
-            isWallJumping = false;
-            wallJumpingDirection = -transform.localScale.x;
-            wallJumpingCounter = wallJumpingTime;
-
-            CancelInvoke(nameof(StopWallJumping));
-        }
-        else
-        {
-            wallJumpingCounter -= Time.deltaTime;
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
 
-        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
-        {
-            isWallJumping = true;
-            rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
-            wallJumpingCounter = 0f;
-
-            if (transform.localScale.x != wallJumpingDirection)
-            {
-                isFacingRight = !isFacingRight;
-                Vector3 localScale = transform.localScale;
-                localScale.x *= -1f;
-                transform.localScale = localScale;
-            }
-
-            Invoke(nameof(StopWallJumping), wallJumpingDuration);
-        }
+        Invoke(nameof(StopWallJumping), wallJumpingDuration);
     }
 
     private void StopWallJumping()
