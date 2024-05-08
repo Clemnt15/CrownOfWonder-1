@@ -1347,7 +1347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1937944129}
-  Player: {fileID: 0}
+  Player: {fileID: 1267376431}
 --- !u!61 &744566519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2593,8 +2593,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.062349796, y: -4.1982, z: 0}
-    m_Extent: {x: 11.19175, y: 7.8613997, z: 0}
+    m_Center: {x: -0.057149887, y: -4.1917, z: 0}
+    m_Extent: {x: 11.18695, y: 7.8513002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3015,8 +3015,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.053900003, y: 0.34460008, z: 0}
-    m_Extent: {x: 0.932, y: 1.9815, z: 0}
+    m_Center: {x: 0.048950016, y: 0.34040004, z: 0}
+    m_Extent: {x: 0.93675, y: 1.9785001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4102,7 +4102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: SCN_2
-  transitionAnimator: {fileID: 0}
+  transitionAnimator: {fileID: 1267376437}
 --- !u!1 &1521544229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,8 +5786,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005850017, y: -0.002000004, z: 0}
-    m_Extent: {x: 0.93455, y: 1.0009, z: 0}
+    m_Center: {x: 0.000100016594, y: 0.0019500256, z: 0}
+    m_Extent: {x: 0.9278, y: 1.00595, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
