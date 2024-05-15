@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public ParticleSystem dust;
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
@@ -30,13 +31,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private TrailRenderer tr;
+    [SerializeField] private Animator playerAnimator;
+
 
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        if (playerAnimator != null)
+        {
+            if (Mathf.Abs(horizontal) > 0)
+            {
+                playerAnimator.SetBool("BoolRun", true);
+            }
+            else
+            {
+                playerAnimator.SetBool("BoolRun", false);
+            }
+        }
+
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            CreateDust();
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
@@ -132,11 +148,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
+            CreateDust();
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 
     private IEnumerator Dash()
