@@ -27,9 +27,11 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform platformCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private LayerMask platformLayer;
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Animator playerAnimator;
 
@@ -86,6 +88,11 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private bool IsPlatformed()
+    {
+        return Physics2D.OverlapCircle(platformCheck.position, 0.2f, platformLayer);
     }
 
     private bool IsWalled()
