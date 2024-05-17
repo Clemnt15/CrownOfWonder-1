@@ -1348,6 +1348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1937944129}
   Player: {fileID: 1267376431}
+  playerAnimator: {fileID: 1267376437}
 --- !u!61 &744566519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2593,8 +2594,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0012998581, y: -4.20185, z: 0}
-    m_Extent: {x: 11.2432, y: 7.8554497, z: 0}
+    m_Center: {x: -0.0021500587, y: -4.19815, z: 0}
+    m_Extent: {x: 11.248449, y: 7.86085, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3015,8 +3016,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.04859999, y: 0.33969998, z: 0}
-    m_Extent: {x: 0.9417, y: 1.9758, z: 0}
+    m_Center: {x: 0.041449994, y: 0.34459996, z: 0}
+    m_Extent: {x: 0.93275, y: 1.9814, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3246,6 +3247,7 @@ MonoBehaviour:
   dust: {fileID: 1585113399}
   rb: {fileID: 1267376438}
   groundCheck: {fileID: 1503679416}
+  platformCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -3253,6 +3255,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 192
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 0
   tr: {fileID: 1267376434}
   playerAnimator: {fileID: 1267376437}
 --- !u!95 &1267376437
@@ -4757,6 +4762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1937944129}
   Player: {fileID: 0}
+  playerAnimator: {fileID: 0}
 --- !u!1 &1578458110
 GameObject:
   m_ObjectHideFlags: 0
@@ -10619,8 +10625,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.008750021, y: 0.006550014, z: 0}
-    m_Extent: {x: 0.93315, y: 0.99645, z: 0}
+    m_Center: {x: -0.00075000525, y: -0.006400019, z: 0}
+    m_Extent: {x: 0.94155, y: 0.9994, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
