@@ -1,12 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
+using JetBrains.Annotations;
+
 
 public class PlayerMovement : MonoBehaviour
 {
     public ParticleSystem dust;
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 16f;
+    [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
     private bool isWallSliding;
@@ -34,7 +37,41 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask platformLayer;
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Animator playerAnimator;
+     
 
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && IsGrounded())
+        {
+            CreateDust();
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+        if (context.performed && wallJumpingCounter > 0f)
+        {
+            isWallJumping = true;
+            rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            wallJumpingCounter = 0f;
+
+            if (transform.localScale.x != wallJumpingDirection)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
+
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        }
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if (context.performed && canDash)
+        {
+            StartCoroutine(Dash());
+
+        }
+    }
 
     private void Update()
     {
@@ -52,11 +89,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            CreateDust();
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
+
+        //if (Input.GetButtonDown("Jump") && IsGrounded())
+        //{
+        //    CreateDust();
+        //    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        //}
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
@@ -71,10 +109,10 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        //{
+        //    StartCoroutine(Dash());
+        //}
     }
 
     private void FixedUpdate()
@@ -128,22 +166,7 @@ public class PlayerMovement : MonoBehaviour
             wallJumpingCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
-        {
-            isWallJumping = true;
-            rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
-            wallJumpingCounter = 0f;
-
-            if (transform.localScale.x != wallJumpingDirection)
-            {
-                isFacingRight = !isFacingRight;
-                Vector3 localScale = transform.localScale;
-                localScale.x *= -1f;
-                transform.localScale = localScale;
-            }
-
-            Invoke(nameof(StopWallJumping), wallJumpingDuration);
-        }
+       
     }
 
     private void StopWallJumping()
@@ -184,3 +207,4 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 }
+
