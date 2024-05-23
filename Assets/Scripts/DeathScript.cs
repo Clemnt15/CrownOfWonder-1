@@ -1,12 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathScript : MonoBehaviour
 {
     public GameObject startPoint;
-    public GameObject Player;
+    public GameObject player;
     public Animator playerAnimator; // Référence à l'Animator du joueur pour déclencher l'animation
+    public MonoBehaviour playerController; // Référence au script de contrôle du joueur
+    public Rigidbody2D playerRigidbody; // Référence au Rigidbody2D du joueur pour arrêter tous les mouvements physiques
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -19,18 +20,32 @@ public class DeathScript : MonoBehaviour
     IEnumerator TransitionAndRespawn()
     {
         Debug.Log("Coroutine");
+
+        // Désactivez le contrôle du joueur
+        playerController.enabled = false;
+
+        // Arrêtez le Rigidbody2D pour éviter tout mouvement physique
+        playerRigidbody.velocity = Vector2.zero;
+        playerRigidbody.angularVelocity = 0f;
+
+        // Réinitialisez toutes les autres animations
+        playerAnimator.SetBool("BoolRun", false);
+        
+
         // Déclenchez l'animation de mort du joueur
-        
-        
         Debug.Log("Fonction");
-        playerAnimator.SetBool("BoolDeath",true); // Assurez-vous que "ANIM_DEATH" est le nom du paramètre de déclenchement dans l'Animator
-        
+        playerAnimator.SetBool("BoolDeath", true);
 
         // Attendez un court moment pour que l'animation de mort soit jouée
         yield return new WaitForSeconds(0.5f); // Vous pouvez ajuster cette durée selon la longueur de votre animation
 
         // Réinitialisez la position du joueur
-        Player.transform.position = startPoint.transform.position;
+        player.transform.position = startPoint.transform.position;
+
+        // Réinitialisez l'animation de mort
         playerAnimator.SetBool("BoolDeath", false);
+
+        // Réactivez le contrôle du joueur
+        playerController.enabled = true;
     }
 }
