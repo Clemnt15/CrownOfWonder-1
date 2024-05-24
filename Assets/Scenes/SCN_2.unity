@@ -1640,7 +1640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &181311456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 0000000005896c64
@@ -1675,8 +1675,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.035099983, y: 0.6237999, z: 0}
-    m_Extent: {x: 7.9246, y: 3.4116, z: 0}
+    m_Center: {x: -1.4991001, y: -0.5388, z: 0}
+    m_Extent: {x: 4.449, y: 2.6086, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1684,27 +1684,28 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.84
+  m_ShapeLightFalloffSize: 1.21
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -7.10867, y: 0.18463671, z: 0}
-  - {x: -3.992676, y: -1.3988509, z: 0}
-  - {x: -1.2070012, y: -1.9534154, z: 0}
-  - {x: 1.5666733, y: -0.5332084, z: 0}
-  - {x: 4.336728, y: -1.5335066, z: 0}
-  - {x: 6.433507, y: -1.206486, z: 0}
-  - {x: 7.046402, y: 0.24364662, z: 0}
-  - {x: 5.7409935, y: 1.063421, z: 0}
-  - {x: 4.1636, y: 0.6594546, z: 0}
-  - {x: 2.0196838, y: 0.28869653, z: 0}
+  - {x: -4.688162, y: -0.97024655, z: 0}
+  - {x: -4.663812, y: -1.6785356, z: 0}
+  - {x: -3.0936036, y: -1.9345493, z: 0}
+  - {x: -1.3009624, y: -1.8915622, z: 0}
+  - {x: -0.60617065, y: -1.3259804, z: 0}
+  - {x: 0.11338806, y: -1.300816, z: 0}
+  - {x: 0.8772125, y: -1.0392431, z: 0}
+  - {x: 1.7413969, y: -0.50245905, z: 0}
+  - {x: 1.2770987, y: -0.47250676, z: 0}
+  - {x: 0.7933922, y: -0.013159871, z: 0}
   - {x: 0.42305374, y: 0.32687163, z: 0}
-  - {x: -2.1341128, y: 2.1624732, z: 0}
-  - {x: -2.1281967, y: 3.1681821, z: 0}
-  - {x: -3.1220737, y: 3.1859295, z: 0}
-  - {x: -3.1339073, y: 2.1506407, z: 0.00000047683716}
-  - {x: -6.1201634, y: 2.1651, z: 0}
-  - {x: -6.116633, y: 1.1689348, z: 0}
-  - {x: -7.12394, y: 1.1739748, z: 0}
+  - {x: 0.049091816, y: 0.54880023, z: 0}
+  - {x: -0.4196024, y: 0.77931404, z: 0}
+  - {x: -1.3185573, y: 0.86034274, z: 0}
+  - {x: -1.2196488, y: 0.50532746, z: 0.00000047683716}
+  - {x: -1.1684036, y: -0.0022838116, z: 0}
+  - {x: -1.4654593, y: -0.2548939, z: 0}
+  - {x: -2.2800536, y: -0.31086636, z: 0.00000047683716}
+  - {x: -4.735071, y: -0.28149462, z: 0}
 --- !u!4 &181311457
 Transform:
   m_ObjectHideFlags: 0
@@ -3932,6 +3933,7 @@ GameObject:
   - component: {fileID: 993427901}
   - component: {fileID: 993427900}
   - component: {fileID: 993427903}
+  - component: {fileID: 993427904}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4047,6 +4049,50 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &993427904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993427899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1000962164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4455,8 +4501,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 18.9345, y: 2.75385, z: 0}
-    m_Extent: {x: 20.4787, y: 5.4713497, z: 0}
+    m_Center: {x: 18.93335, y: 2.7531002, z: 0}
+    m_Extent: {x: 20.47475, y: 5.4662, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
