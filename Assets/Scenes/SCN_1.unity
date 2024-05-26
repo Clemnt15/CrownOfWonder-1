@@ -2623,7 +2623,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2647,7 +2647,7 @@ RectTransform:
   m_GameObject: {fileID: 927437024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3951461, y: 4.859262, z: 4.859262}
+  m_LocalScale: {x: 1.929362, y: 3.9142814, z: 3.9142814}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1424045675}
@@ -8031,8 +8031,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.05830002, y: -4.1895003, z: 0}
-    m_Extent: {x: 11.1977, y: 7.8606, z: 0}
+    m_Center: {x: -0.057450294, y: -4.1931, z: 0}
+    m_Extent: {x: 11.19495, y: 7.8503, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8453,8 +8453,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5821998, y: 0.36284995, z: 0}
-    m_Extent: {x: 2.4717, y: 1.99665, z: 0}
+    m_Center: {x: 1.58285, y: 0.36574996, z: 0}
+    m_Extent: {x: 2.47325, y: 1.99865, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8622,7 +8622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.222595, y: 26.245972}
+  m_AnchoredPosition: {x: 6.222534, y: 26.245972}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1424045676
@@ -20826,8 +20826,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 5.70105, y: -7.56575, z: 0}
-    m_Extent: {x: 6.64165, y: 8.57325, z: 0}
+    m_Center: {x: 5.7096, y: -7.574, z: 0}
+    m_Extent: {x: 6.6366, y: 8.5627, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21275,9 +21275,16 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1424045674}
   dialogueText: {fileID: 927437025}
   dialogue:
-  - salut
-  - ez
-  keyToPress: 32
+  - EH toi !!
+  - "Ou vas-tu commes \xE7a ?"
+  - "Le temple se trouve derri\xE8re moi,\_"
+  - "La legende raconte que le temple\_"
+  - "Prot\xE8ge un grand tresor, une couronne !!"
+  - "Qui autrefois appartenait a ...\_"
+  - J'ai l'impression que tu connais deja l'histoire.
+  - Tu sembles un peu jeune,
+  - Pour t aventurer seul dans le temple.
+  keyToPress: 101
   typingSpeed: 0.05
   typingSound: {fileID: 0}
 --- !u!1 &2100739076
