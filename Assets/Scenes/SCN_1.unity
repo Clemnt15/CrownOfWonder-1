@@ -8031,8 +8031,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.057450294, y: -4.1931, z: 0}
-    m_Extent: {x: 11.19495, y: 7.8503, z: 0}
+    m_Center: {x: -0.0010499954, y: -4.1989, z: 0}
+    m_Extent: {x: 11.24595, y: 7.8623, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8453,8 +8453,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.58285, y: 0.36574996, z: 0}
-    m_Extent: {x: 2.47325, y: 1.99865, z: 0}
+    m_Center: {x: 1.58615, y: 0.36360002, z: 0}
+    m_Extent: {x: 2.47505, y: 1.997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20826,8 +20826,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 5.7096, y: -7.574, z: 0}
-    m_Extent: {x: 6.6366, y: 8.5627, z: 0}
+    m_Center: {x: 5.7049503, y: -7.5677996, z: 0}
+    m_Extent: {x: 6.63085, y: 8.568, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21282,8 +21282,14 @@ MonoBehaviour:
   - "Prot\xE8ge un grand tresor, une couronne !!"
   - "Qui autrefois appartenait a ...\_"
   - J'ai l'impression que tu connais deja l'histoire.
-  - Tu sembles un peu jeune,
+  - Dis moi ?,Tu sembles un peu jeune,
   - Pour t aventurer seul dans le temple.
+  - "C'est tr\xE8s dangereux comme endroit !!"
+  - Tu ne devrais pas y aller !
+  - Mais j'ai l'impression
+  - "Que tu ne vas pas m'\xE9couter"
+  - Bref, bonne chance
+  - Toute facon, on se reverra plus loin...
   keyToPress: 101
   typingSpeed: 0.05
   typingSound: {fileID: 0}
