@@ -8,6 +8,7 @@ public class DeathScript : MonoBehaviour
     public Animator playerAnimator; // Référence à l'Animator du joueur pour déclencher l'animation
     public MonoBehaviour playerController; // Référence au script de contrôle du joueur
     public Rigidbody2D playerRigidbody; // Référence au Rigidbody2D du joueur pour arrêter tous les mouvements physiques
+    public MonoBehaviour playerDash; // Référence au script de dash du joueur
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -24,13 +25,15 @@ public class DeathScript : MonoBehaviour
         // Désactivez le contrôle du joueur
         playerController.enabled = false;
 
+        // Désactivez la capacité de dash du joueur
+        playerDash.enabled = false;
+
         // Arrêtez le Rigidbody2D pour éviter tout mouvement physique
         playerRigidbody.velocity = Vector2.zero;
         playerRigidbody.angularVelocity = 0f;
 
         // Réinitialisez toutes les autres animations
         playerAnimator.SetBool("BoolRun", false);
-        
 
         // Déclenchez l'animation de mort du joueur
         Debug.Log("Fonction");
@@ -47,5 +50,8 @@ public class DeathScript : MonoBehaviour
 
         // Réactivez le contrôle du joueur
         playerController.enabled = true;
+
+        // Réactivez la capacité de dash du joueur
+        playerDash.enabled = true;
     }
 }

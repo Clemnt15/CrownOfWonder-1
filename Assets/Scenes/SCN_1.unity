@@ -722,6 +722,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f1975e15-4f53-4656-9e62-84b1f554d61a
     m_ActionName: Player/WallJump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 04dbc1a2-ca14-41d2-84a2-fd0d41363911
+    m_ActionName: Pnj/Skip[/XInputControllerWindows/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1857,6 +1861,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 408484274}
   playerController: {fileID: 408484273}
   playerRigidbody: {fileID: 408484275}
+  playerDash: {fileID: 0}
 --- !u!61 &744566519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2623,7 +2628,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2647,7 +2652,7 @@ RectTransform:
   m_GameObject: {fileID: 927437024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.929362, y: 3.9142814, z: 3.9142814}
+  m_LocalScale: {x: 2.6113915, y: 5.29798, z: 5.29798}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1424045675}
@@ -8031,8 +8036,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0010499954, y: -4.1989, z: 0}
-    m_Extent: {x: 11.24595, y: 7.8623, z: 0}
+    m_Center: {x: -0.067500114, y: -4.1928997, z: 0}
+    m_Extent: {x: 11.1947, y: 7.8602, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8453,8 +8458,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.58615, y: 0.36360002, z: 0}
-    m_Extent: {x: 2.47505, y: 1.997, z: 0}
+    m_Center: {x: 1.5828, y: 0.36420006, z: 0}
+    m_Extent: {x: 2.4745002, y: 2.0012, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9805,6 +9810,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 0}
   playerController: {fileID: 0}
   playerRigidbody: {fileID: 0}
+  playerDash: {fileID: 0}
 --- !u!1 &1565865241
 GameObject:
   m_ObjectHideFlags: 0
@@ -20826,8 +20832,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 5.7049503, y: -7.5677996, z: 0}
-    m_Extent: {x: 6.63085, y: 8.568, z: 0}
+    m_Center: {x: 5.70665, y: -7.56435, z: 0}
+    m_Extent: {x: 6.62955, y: 8.57085, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21120,6 +21126,7 @@ GameObject:
   - component: {fileID: 2094170863}
   - component: {fileID: 2094170861}
   - component: {fileID: 2094170866}
+  - component: {fileID: 2094170867}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -21276,23 +21283,101 @@ MonoBehaviour:
   dialogueText: {fileID: 927437025}
   dialogue:
   - EH toi !!
-  - "Ou vas-tu commes \xE7a ?"
-  - "Le temple se trouve derri\xE8re moi,\_"
-  - "La legende raconte que le temple\_"
-  - "Prot\xE8ge un grand tresor, une couronne !!"
-  - "Qui autrefois appartenait a ...\_"
-  - J'ai l'impression que tu connais deja l'histoire.
-  - Dis moi ?,Tu sembles un peu jeune,
-  - Pour t aventurer seul dans le temple.
-  - "C'est tr\xE8s dangereux comme endroit !!"
-  - Tu ne devrais pas y aller !
+  - Ou vas-tu  ?
+  - "Le temple se trouve\_"
+  - "derri\xE8re moi"
+  - 'La legende raconte '
+  - "que le temple\_"
+  - "Prot\xE8ge un grand tresor,"
+  - Une couronne !!
+  - "Qui autrefois,\_"
+  - "appartenait a ...\_"
+  - J'ai l'impression que
+  - ' tu connais deja l''histoire.'
+  - Dis moi ?,
+  - Tu sembles un peu jeune,
+  - 'Pour t aventurer '
+  - seul dans le temple.
+  - "C'est tr\xE8s dangereux "
+  - comme endroit !!
+  - Tu ne devrais pas
+  - ' y aller !'
   - Mais j'ai l'impression
-  - "Que tu ne vas pas m'\xE9couter"
+  - 'Que tu ne vas pas '
+  - "m'\xE9couter"
   - Bref, bonne chance
-  - Toute facon, on se reverra plus loin...
+  - on se reverra plus loin...
+  - 'Toute facon, '
   keyToPress: 101
   typingSpeed: 0.05
   typingSound: {fileID: 0}
+--- !u!114 &2094170867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094170860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 4c50f5bf4072b6c469e784a06fc5381c,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f0488b5d-918f-4125-ac34-e39b3b214092
+    m_ActionName: Player/Jump[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 05efa4d5-8a96-48f9-8427-024efa8bcf3e
+    m_ActionName: Player/Move[/Keyboard/a,/XInputControllerWindows/leftStick/left,/Keyboard/d,/XInputControllerWindows/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f0ea62ba-6b89-48a8-b470-c6f49731c1e1
+    m_ActionName: Player/Dash[/XInputControllerWindows/buttonWest,/Keyboard/leftShift,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f1975e15-4f53-4656-9e62-84b1f554d61a
+    m_ActionName: Player/WallJump[/XInputControllerWindows/buttonSouth,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9dce5659-7517-40f0-aced-d6fd30c6f711
+    m_ActionName: pause/Pause[/XInputControllerWindows/start,/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2094170866}
+        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
+        m_MethodName: Pnj
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 04dbc1a2-ca14-41d2-84a2-fd0d41363911
+    m_ActionName: Pnj/Skip[/XInputControllerWindows/rightShoulder]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Pnj
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2100739076
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
@@ -15,9 +16,10 @@ public class NPC : MonoBehaviour
 
     private Coroutine currentCoroutine; // Coroutine actuelle pour arrêter la dactylographie si nécessaire
 
-    void Update()
+
+    public void Pnj(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown(keyToPress) && dialoguePanel.activeSelf)
+        if (context.performed)
         {
             DisplayNextLine();
         }

@@ -215,6 +215,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Pnj",
+            "id": "4474344d-9dc9-47d9-b891-1c95b48aea66",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "04dbc1a2-ca14-41d2-84a2-fd0d41363911",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b3c5e269-1e4b-4cf8-8bce-dbc60edadb6f",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

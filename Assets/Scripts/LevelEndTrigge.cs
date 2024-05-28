@@ -17,7 +17,7 @@ public class LevelEndTrigger : MonoBehaviour
             // Activer la caméra du niveau suivant avec une transition rapide
             nextLevelCamera.Priority = 10;
 
-            // Désactiver la caméra actuelle (si nécessaire)
+            // Désactiver la caméra actuelle 
             CinemachineVirtualCamera currentCamera = GetComponentInParent<CinemachineVirtualCamera>();
             if (currentCamera != null)
             {
