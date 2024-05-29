@@ -3665,7 +3665,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 1492735608}
   playerController: {fileID: 1492735607}
   playerRigidbody: {fileID: 1492735609}
-  playerDash: {fileID: 0}
 --- !u!61 &376025082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4046,7 +4045,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 1492735608}
   playerController: {fileID: 1492735607}
   playerRigidbody: {fileID: 1492735609}
-  playerDash: {fileID: 1492735607}
 --- !u!61 &848195249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4160,7 +4158,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 1492735608}
   playerController: {fileID: 1492735607}
   playerRigidbody: {fileID: 1492735609}
-  playerDash: {fileID: 0}
 --- !u!61 &933913851
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5154,8 +5151,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 18.935452, y: 2.7535, z: 0}
-    m_Extent: {x: 20.47575, y: 5.467, z: 0}
+    m_Center: {x: 18.9416, y: 2.7521498, z: 0}
+    m_Extent: {x: 20.472599, y: 5.46325, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5384,7 +5381,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 1492735608}
   playerController: {fileID: 1492735607}
   playerRigidbody: {fileID: 1492735609}
-  playerDash: {fileID: 0}
 --- !u!61 &1329713100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8162,7 +8158,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 0}
   playerController: {fileID: 0}
   playerRigidbody: {fileID: 0}
-  playerDash: {fileID: 0}
 --- !u!61 &1675845559
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13147,7 +13142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelCamera: {fileID: 560522733}
   transitionDuration: 0.1
-  disableDelay: 1
+  disableDelay: 0.5
 --- !u!1 &1751439806
 GameObject:
   m_ObjectHideFlags: 0
@@ -13457,7 +13452,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 1492735608}
   playerController: {fileID: 1492735607}
   playerRigidbody: {fileID: 1492735609}
-  playerDash: {fileID: 0}
 --- !u!61 &2049230799
 BoxCollider2D:
   m_ObjectHideFlags: 0

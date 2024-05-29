@@ -1861,7 +1861,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 408484274}
   playerController: {fileID: 408484273}
   playerRigidbody: {fileID: 408484275}
-  playerDash: {fileID: 0}
 --- !u!61 &744566519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2628,7 +2627,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2652,7 +2651,7 @@ RectTransform:
   m_GameObject: {fileID: 927437024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6113915, y: 5.29798, z: 5.29798}
+  m_LocalScale: {x: 1.9189548, y: 3.8931673, z: 3.8931673}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1424045675}
@@ -8036,8 +8035,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.067500114, y: -4.1928997, z: 0}
-    m_Extent: {x: 11.1947, y: 7.8602, z: 0}
+    m_Center: {x: -0.0034503937, y: -4.2052, z: 0}
+    m_Extent: {x: 11.25245, y: 7.8576, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8458,8 +8457,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5828, y: 0.36420006, z: 0}
-    m_Extent: {x: 2.4745002, y: 2.0012, z: 0}
+    m_Center: {x: 1.5895, y: 0.36455005, z: 0}
+    m_Extent: {x: 2.4817, y: 1.99875, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9810,7 +9809,6 @@ MonoBehaviour:
   playerAnimator: {fileID: 0}
   playerController: {fileID: 0}
   playerRigidbody: {fileID: 0}
-  playerDash: {fileID: 0}
 --- !u!1 &1565865241
 GameObject:
   m_ObjectHideFlags: 0
@@ -20832,8 +20830,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 5.70665, y: -7.56435, z: 0}
-    m_Extent: {x: 6.62955, y: 8.57085, z: 0}
+    m_Center: {x: 5.7125, y: -7.56885, z: 0}
+    m_Extent: {x: 6.6365, y: 8.57015, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21284,30 +21282,22 @@ MonoBehaviour:
   dialogue:
   - EH toi !!
   - Ou vas-tu  ?
-  - "Le temple se trouve\_"
-  - "derri\xE8re moi"
+  - "Le temple se trouve\_derri\xE8re moi"
   - 'La legende raconte '
-  - "que le temple\_"
-  - "Prot\xE8ge un grand tresor,"
+  - "que le temple\_prot\xE8ge un grand tresor"
   - Une couronne !!
-  - "Qui autrefois,\_"
-  - "appartenait a ...\_"
+  - "Qui autrefois, appartenait a ...\_"
   - J'ai l'impression que
   - ' tu connais deja l''histoire.'
   - Dis moi ?,
   - Tu sembles un peu jeune,
-  - 'Pour t aventurer '
-  - seul dans le temple.
-  - "C'est tr\xE8s dangereux "
-  - comme endroit !!
-  - Tu ne devrais pas
-  - ' y aller !'
+  - 'Pour t aventurer seul dans le temple. '
+  - "C'est tr\xE8s dangereux  comme endroit !!"
+  - Tu ne devrais pas  y aller !
   - Mais j'ai l'impression
-  - 'Que tu ne vas pas '
-  - "m'\xE9couter"
+  - "Que tu ne vas pas m'\xE9couter"
   - Bref, bonne chance
-  - on se reverra plus loin...
-  - 'Toute facon, '
+  - 'on se reverra plus loin Toute facon, '
   keyToPress: 101
   typingSpeed: 0.05
   typingSound: {fileID: 0}

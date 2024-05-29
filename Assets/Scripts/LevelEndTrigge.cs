@@ -6,7 +6,7 @@ public class LevelEndTrigger : MonoBehaviour
 {
     public CinemachineVirtualCamera nextLevelCamera; // Référence à la caméra du niveau suivant
 
-    public float transitionDuration = 1.0f; // Durée de la transition en secondes
+    public float transitionDuration = 0.5f; // Durée de la transition en secondes
     public float disableDelay = 2.0f; // Délai avant de désactiver le déclencheur en secondes
     private IEnumerator coroutine;
 
