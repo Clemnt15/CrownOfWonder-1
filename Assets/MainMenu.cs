@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SCN_1"); // Remplacez "NomDeVotreSceneDeJeu" par le nom de la scène à charger pour commencer le jeu
+        SceneManager.LoadScene("Intro"); // Remplacez "NomDeVotreSceneDeJeu" par le nom de la scène à charger pour commencer le jeu
     }
 
     public void OpenOptions()
