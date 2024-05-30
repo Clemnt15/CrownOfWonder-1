@@ -7956,8 +7956,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.05824995, y: -4.1963005, z: 0}
-    m_Extent: {x: 11.18845, y: 7.8525, z: 0}
+    m_Center: {x: -0.06989956, y: -4.19335, z: 0}
+    m_Extent: {x: 11.1938, y: 7.85305, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8378,8 +8378,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.5926999, y: 0.3732, z: 0}
-    m_Extent: {x: 2.4713998, y: 2.0055, z: 0}
+    m_Center: {x: 1.58815, y: 0.36840004, z: 0}
+    m_Extent: {x: 2.46985, y: 2.0042, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20751,8 +20751,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 5.69645, y: -7.5687504, z: 0}
-    m_Extent: {x: 6.63865, y: 8.56785, z: 0}
+    m_Center: {x: 5.70485, y: -7.56925, z: 0}
+    m_Extent: {x: 6.64065, y: 8.57345, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -20809,11 +20809,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9ebb6ca5ee4094addac513cf8528f1e1, type: 2}
-    m_FontSize: 0
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -20838,14 +20838,14 @@ RectTransform:
   m_GameObject: {fileID: 2017410736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.6817715, y: 7.702954, z: 7.702954}
+  m_LocalScale: {x: 3.3840594, y: 7.080084, z: 7.080084}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1424045675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 33}
+  m_AnchoredPosition: {x: 74, y: 33}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2020223388
@@ -21280,24 +21280,24 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1424045674}
   dialogueText: {fileID: 2017410737}
   dialogue:
-  - EH toi !!
-  - Ou vas-tu  ?
-  - "Le temple se trouve\_ derri\xE8re moi"
-  - 'La legende raconte '
-  - "que le temple \_prot\xE8ge un grand tresor"
-  - Une couronne !!
-  - "Qui autrefois, appartenait a ...\_"
-  - J'ai l'impression que
-  - ' tu connais deja l''histoire.'
-  - Dis moi ?,
-  - Tu sembles un peu jeune,
-  - 'Pour t aventurer seul dans le temple. '
-  - "C'est tr\xE8s dangereux  comme endroit !!"
-  - Tu ne devrais pas  y aller !
-  - Mais j'ai l'impression
-  - "Que tu ne vas pas m'\xE9couter"
-  - Bref, bonne chance
-  - 'on se reverra plus loin Toute facon, '
+  - HEY!
+  - Where are you going  ?
+  - The temple is behind me
+  - 'The legend tells '
+  - that the temple protects a great tresor
+  - A crown!!
+  - "Which once belonged to a ...\_"
+  - I feel like
+  - ' You already know the story.'
+  - Tell me? ,
+  - You seem a little young,
+  - 'To venture into the temple alone. '
+  - This is a very dangerous place!
+  - "You shouldn\u2019t be going!"
+  - but I have the impression
+  - "That you won\u2019t listen to me"
+  - Anyway, good luck
+  - "I\u2019ll see you later Anyway, "
   keyToPress: 101
   typingSpeed: 0.05
   typingSound: {fileID: 0}

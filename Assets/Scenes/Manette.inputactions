@@ -243,6 +243,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "cine",
+            "id": "6cc2d132-9379-48fc-ba97-6a1c06671af7",
+            "actions": [
+                {
+                    "name": "skipp",
+                    "type": "Button",
+                    "id": "92ee3078-bade-4d25-ba83-f5d8a27c804c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cedd1403-47cb-44d3-8057-0a639cc65169",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "skipp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
