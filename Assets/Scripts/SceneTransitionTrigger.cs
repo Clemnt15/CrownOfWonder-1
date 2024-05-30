@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionTrigger : MonoBehaviour
 {
     public string sceneName; // Le nom de la scène à charger
-    public Animator transitionAnimator;
+    public Animator transitionAnimator; // L'animator de transition
+    public float transitionTime = 1f; // Temps de la transition (doit correspondre à la durée de l'animation)
 
     private bool hasPlayerEntered = false; // Variable pour suivre si le joueur a déjà déclenché la transition
 
@@ -21,9 +21,10 @@ public class SceneTransitionTrigger : MonoBehaviour
 
     IEnumerator LoadSceneWithTransition()
     {
-        transitionAnimator.SetTrigger("Start"); // Déclenche l'animation de transition
+        transitionAnimator.SetTrigger("Crossfade_start"); // Déclenche l'animation de transition
 
-        yield return new WaitForSeconds(transitionAnimator.GetCurrentAnimatorStateInfo(0).length);
+        // Attend la durée de l'animation de transition
+        yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(sceneName); // Charge la nouvelle scène
     }
