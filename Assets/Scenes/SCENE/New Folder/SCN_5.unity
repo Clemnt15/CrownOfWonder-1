@@ -3276,6 +3276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: SCN_5
   transitionAnimator: {fileID: 440511541}
+  transitionTime: 1
 --- !u!61 &317479549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10087,8 +10088,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38817da3c874f5459d0e7534f286254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SCN_Final
+  sceneName: SCN_6
   transitionAnimator: {fileID: 440511541}
+  transitionTime: 1
 --- !u!61 &825405864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12209,7 +12211,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 1, g: 0.6922987, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.6922987, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13170,6 +13172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: SCN_Final
   transitionAnimator: {fileID: 0}
+  transitionTime: 1
 --- !u!61 &1336845157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20234,8 +20237,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 50.0185, y: 0.019900322, z: 0}
-    m_Extent: {x: 53.454597, y: 11.5112, z: 0}
+    m_Center: {x: 50.01555, y: 0.018899918, z: 0}
+    m_Extent: {x: 53.45485, y: 11.512, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

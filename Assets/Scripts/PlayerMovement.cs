@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private float dashingPower = 24f;
     private float dashingTime = 0.2f;
-    private float dashingCooldown = 1f;
+    private float dashingCooldown = 0.4f;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
