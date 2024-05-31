@@ -21,7 +21,7 @@ public class SceneTransitionTrigger : MonoBehaviour
 
     IEnumerator LoadSceneWithTransition()
     {
-        transitionAnimator.SetTrigger("Crossfade_start"); // Déclenche l'animation de transition
+        transitionAnimator.SetTrigger("start"); // Déclenche l'animation de transition
 
         // Attend la durée de l'animation de transition
         yield return new WaitForSeconds(transitionTime);
